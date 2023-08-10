@@ -1,0 +1,28 @@
+Note - This method helps in creating objects of a single class
+
+This pattern generally has 3 components
+    1. An interface which defines the type of objects the factory would instantiate and return to the client.
+    2. Implementations of the type interface considered in the 1st point. These are the classes whose objects are actually created by the factory for the
+       client upon request.
+    3. A factory class that exposes a functionality to return an object of the particular type based on some input from the client. The object creation
+       logic resides inside this class.
+
+Q. Where to consider using this Pattern?
+A. This pattern can be considered when there is a super class with it's multiple sub classes and we want to get their objects based on some input. In such a
+   case the 'Factory' class takes the responsibility of creating those objects based on the some input from the client code.
+   Suppose a library is being created where the client can request different types of object but is not concerned how that particular object is created.
+
+Q. Advantages of using Factory Method Pattern
+A.
+    1. Loosely couples the object creation logic from the client code into a separate factory class. Object creation is simplified
+    2. Very easy to extend the Factory class to support other objects without having to change existing objects. Supports open-closed principle
+    3. Since Factory exposes a single method to create objects of a single type, the client needs to have the knowledge of only the interface
+       rather than the actual type of objects the factory creates.
+    4. It has low complexity
+
+Q. What are the disadvantages of using Factory Method pattern?
+A.
+    1. The Factory class can get bloated in case there are many types of objects that are to be created
+    2. It can introduce some overhead since a new class needs to be created to handle the object creation logic
+
+

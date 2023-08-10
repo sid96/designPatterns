@@ -1,0 +1,25 @@
+Q. What is Abstract Factory Design Pattern
+A. An Abstract Factory Design Pattern(AFDP) is a creational design pattern that simplifies organising and creating objects of different types.
+   It holds the logic of creating different kinds of Factories based on some user input where each factory denotes a family of different objects with some common property.
+   Using that particular factory the client can create different kinds of objects
+
+Q. How is this different from the Factory Design Pattern
+   It is is different from Factory Design Pattern(FDP) in the sense that it can help in creating multiple types of objects that belong to one family
+   whereas the FDP pattern helps in creating objects of a single type.
+
+
+Q. What are the advantages of this pattern
+   1. It can help in creating objects of different types that may be linked in some manner
+   2. It helps simplifying the organization and creation of different objects that may be related by a property
+
+
+Q. What are the dis-advantages of this pattern
+   1. It is more complex than FDP
+   2. The biggest weakness of the factory design pattern is the fact that its implementation leads to increase in the number of integrated classes, because for every new Type for eg. Linux
+      would require creation of a new Factory
+
+
+Eg.View for different platforms such as Windows, Mac and Linux
+
+
+

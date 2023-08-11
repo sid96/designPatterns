@@ -1,0 +1,34 @@
+Note :- This pattern helps in creating the objects of same class.
+
+Q. What is Builder Design Pattern
+A. An Builder Pattern is a creational design pattern that simplifies organising and creating complex objects that can have different configurations.
+   This separates the construction logic of a complex object into a different class. It can be used when the object has too many properties and there is a
+   requirement to create different kinds of objects using some or all of the properties. The object is made immutable once it's construction process is over
+   Although Kotlin has default and optional parameter feature which can help simply by creating a data class with all it's parameters optional, however this pattern can still be used if we do not wish to
+   expose the actual creation process of the object and wish to have properties added in any order. In a data class we may have to follow the order of the parameters
+   or use named arguments.
+
+Q. What are the different components of Builder Pattern?
+A.
+    1. A class whose objects are to be created using the builder. The constructor of this class should be private and only the properties should be public to prevent this
+       from being created manually by the client
+    2. An inner Builder class so that it has the access to the constructor of the class whose object needs to be created. This holds same properties of the object and exposes
+       different methods to be used by the client to configure the object. Additionally it also exposes the build method to construct and return the created object to the
+       client.
+
+Q. What are the advantages of this pattern
+A.
+   1. It allows to create different representations of the same object: The Builder pattern allows to create different representations of the same object,
+      this can be very useful in situations where the same object needs to be constructed in different ways.
+   2. Hides the logic of object creation from the client and exposes only helper functions for the client to configure the object as desired.
+
+
+Q. What are the dis-advantages of this pattern
+A.
+   1. It may add some overheads by creating additional Builder class
+   2. Builder class can become very large and complicated in case the number of properties of the object are large.
+
+Eg. AlertDialog in android, Retrofit Builder in android
+
+
+

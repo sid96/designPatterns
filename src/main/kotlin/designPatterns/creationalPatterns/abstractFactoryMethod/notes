@@ -1,3 +1,5 @@
+Note -: This pattern can help in the creation of the objects for different classes
+
 Q. What is Abstract Factory Design Pattern
 A. An Abstract Factory Design Pattern(AFDP) is a creational design pattern that simplifies organising and creating objects of different types.
    It holds the logic of creating different kinds of Factories based on some user input where each factory denotes a family of different objects with some common property.

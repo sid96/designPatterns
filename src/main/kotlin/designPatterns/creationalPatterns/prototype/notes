@@ -1,0 +1,23 @@
+Note -: Although this pattern simplifies the pattern of cloning, but in Kotlin there is a copy method that is directly available in all the data classes
+        that may be used for the same process.
+
+Q. What is Prototype Pattern?
+A. Prototype Pattern is a creational design pattern that creates new objects by creating a copy of the existing objects. Let’s say you have an object and you want to copy that.
+   How would you do it? First, you have to create a new object of the same class. Then you have to go through all the fields of the original object and copy their values over to the new object.
+   Prototype pattern delegates the cloning process to the actual object that it clones. In this the existing object is termed as 'Prototype'. How the object is cloned is not defined
+   by this pattern instead making the object cloneable is the purpose.
+
+Q. What are the components of a Prototype Pattern?
+A. 1. It consists of an interface which defines a contract for the classes that can be cloned. The interface usually contains a single method clone()
+   2. It consists of a class that implements the above mentioned interface. The clone() holds the logic of cloning.
+   3. A client that invokes the clone() method on an object whose clone needs to be created.
+
+Q. What are the advantages of this pattern?
+   1. Using this pattern complex objects can be cloned easily without coupling that process which requires a clone.
+   2. There is a flexibility to change some of the properties of the copied object and keep the other properties same as the prototype.
+   3. When object creation is time consuming, and costly operation, so we create objects with the existing object itself. This can help in saving time and resources
+
+Eg.
+
+
+

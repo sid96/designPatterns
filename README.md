@@ -7,3 +7,5 @@ The Following patterns are currently covered in this Repository.
 
 1. Factory Method Pattern
 2. Abstract Factory Pattern
+3. Builder Pattern
+4. Prototype Pattern

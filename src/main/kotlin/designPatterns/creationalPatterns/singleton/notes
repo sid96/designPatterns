@@ -1,0 +1,21 @@
+Note -: In Kotlin it is very easy to create a Singleton without any extra overheads using 'object' keyword
+
+Q. What is Singleton Pattern?
+A. A Singleton pattern ensures that a class maintains only one object throughout the system and also provides a mechanism to access that object anywhere within the system.
+   While implementing this pattern extra care needs to be taken in order to make the object thread safe by using synchronized keyword.
+
+Q. What are the components of a Singleton Pattern?
+A. Singleton pattern comprises only 1 class that takes care of maintaining it's single thread safe object and also providing a global access point for other clients
+
+Q. What are the advantages of this pattern?
+A.
+   1. It may improve performance by reusing the same instance within the system
+   2. It maintains a single state of the object throughout the system
+
+Q. How to create a Singleton pattern?
+A. In general the constructor of the class whose singleton is to be created is made private along with having a static method to create a new instance if it is not already created
+   or return the same instance if it already exists. This method may also hold the additional logic to make the singleton object thread safe so that it can be accessed
+   concurrently by multiple threads.
+
+
+

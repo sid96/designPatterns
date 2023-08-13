@@ -9,3 +9,4 @@ The Following patterns are currently covered in this Repository.
 2. Abstract Factory Pattern
 3. Builder Pattern
 4. Prototype Pattern
+5. Singleton Pattern

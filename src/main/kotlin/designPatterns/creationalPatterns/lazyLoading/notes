@@ -1,0 +1,31 @@
+Note: In Kotlin the Lazy Loading can be easily achieved using the 'by lazy' delegate. However the implementations mentioned below give a general idea of how Lazy Loading
+      can be implemented in general.
+
+Q. What is the meaning of lazy loading?
+A. Lazy loading is a process of creation of the object of a class when it is actually required and not before in order to improve performance. This is used in case the cost
+   of creation of object is high and it the object is not always required.
+
+Q. What are the different implementations of a lazy loading pattern?
+A.
+    1. Lazy Initialization
+    2. Value Holder
+
+Q. What is Lazy Initialization implementation of Lazy Loading?
+A. In case of Lazy Initialization usually some or all of the properties of the object under consideration are not initialized when the object is being created. Rather the
+   properties are created when they are actually required. It may also mean creating different objects of a class based on the type and maintaining those inside a static
+   map. For such a requirement a static map of objects with key as the type and value as the actual object of that is maintained.
+
+   A Ghost is an object is not loaded in it's full state. Only some of the properties of the object are initialized during the object creation and the rest of
+   the properties are lazily initialized as and when the need arises
+
+Q. What is Value Holder implementation of Lazy Loading?
+A. In case of Value Holder implementation of the Lazy Loading pattern, a generic Value Holder class is created that maintains a reference of the value and the supplier which
+   is responsible for initialising that value. The property that needs to be lazily loaded is wrapped in ValueHolder. As soon as the lazy property's getter is invoked,
+   it makes a call to a method inside the ValueHolder which first initializes the value if not already initialised using the supplier and then returns the value.
+
+Q. Advantages and dis-advantages of this pattern.
+A. Advantage - Using this pattern improves the startup time of the applications as the heavy objects are not initialised until absolutely required
+   Disadvantage - The pattern can impact the runtime performance as a check is performed whether or not the loading of the object is required.
+
+   The pattern should be used by keeping in mind some trade-off with the performance
+

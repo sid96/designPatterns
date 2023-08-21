@@ -11,3 +11,8 @@ The Following patterns are currently covered in this Repository.
 4. Prototype Pattern
 5. Singleton Pattern
 6. Lazy Loading
+
+
+### Structural Patterns
+
+1. Adapter Design Pattern

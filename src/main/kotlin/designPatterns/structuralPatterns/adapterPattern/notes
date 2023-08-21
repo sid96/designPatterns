@@ -27,4 +27,4 @@ Q. What are the advantages of this pattern?
 A. It helps in clear separation of the formatting logic with the client object and the library object
 
 
-Eg. Interacting with the analytics library by creating an Adapter between the Client and the Analytics Library.
+Eg. Interacting with the analytics library by creating an Adapter between the Client and the Analytics Library, Recycler View Adapter

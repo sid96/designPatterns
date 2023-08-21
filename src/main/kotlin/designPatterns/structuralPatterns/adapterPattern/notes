@@ -1,0 +1,30 @@
+Q. What is an Adapter Pattern?
+A. An Adapter pattern is a structural design pattern that helps in the interaction of 2 different objects that follow a different contract. For eg. If a client expects to
+   use a library for analytics that expects data in a format different than what client understands, an adapter can be used in the middle to communicate the calls made
+   by the client to the service by converting the data into an appropriate format.
+
+   The working:
+   1. The Adapter implements the interface that is understood by the client.
+   2. Using that it can safely call the adapter methods.
+   3. Upon receiving the call from the client, the adapter calls the appropriate function of the other object after formatting the client calls in a
+      manner understood by the other object
+
+Q. How to make an Adapter Pattern?
+A.
+    1. Make sure there are 2 classes into consideration following different/incompatible interfaces. A Client object and a Service or Library object.
+    2. Create a client interface with the methods that client can make the calls to.
+    3. Implement the Client Interface in the Adapter class.
+    4. Create a reference to the Library object inside the adapter.
+    5. Implement the adapter methods such that on receiving the calls from the client, it delegates those calls to the Service class after making the required formatting
+       changes.
+    6. Clients should be using the adapter using the client interface only so that the Adapter class can be changed without affecting the client.
+
+
+Q. What are the dis-advantages of this pattern?
+A. It introduces some complexity in the code due to the addition of new classes and interfaces.
+
+Q. What are the advantages of this pattern?
+A. It helps in clear separation of the formatting logic with the client object and the library object
+
+
+Eg. Interacting with the analytics library by creating an Adapter between the Client and the Analytics Library.
